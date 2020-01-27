@@ -26,8 +26,6 @@ void setup() {
 }
 
 void loop() {
-  // put your main code here, to run repeatedly:
-
   float umidade = dht.readHumidity();
   double temperatura = dht.readTemperature();
  
@@ -36,18 +34,15 @@ void loop() {
   Serial.println(umidade);
   Serial.println("==============================");
 
-
   if(isnan(temperatura) || isnan(umidade)){
     tela.setFont(SmallFont);
     tela.print("Falha ao ler o sensor.", LEFT, 0);
   }else{
     tela.setFont(SmallFont);
-
     tela.print("Umidade: ", LEFT, 10);
     tela.printNumF(umidade,2, RIGHT, 10);
     tela.print("Temp: ", LEFT, 35);
     tela.printNumF(temperatura,2, RIGHT, 35);
     //tela.clrScr();
   }
- 
 }
