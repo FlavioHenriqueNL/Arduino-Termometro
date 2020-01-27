@@ -1,0 +1,1 @@
+Programa básico onde mostra a temperatura e a umidade do Ar através do sensor DHT11 e Display LCD Nokia.
